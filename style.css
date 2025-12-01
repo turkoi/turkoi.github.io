@@ -1,100 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;500&display=swap');
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #0d0d0d, #111111);
-  color: #00ff00;
-  line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top, #000000, #020f06, #000000);
+    font-family: 'Share Tech Mono', monospace;
+    color: #00ff80;
 }
 
+/* NAVBAR */
 nav {
-  background: #111111;
-  padding: 15px 30px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 2px solid #00ff00;
+    width: 100%;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid #003f20;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  gap: 30px;
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #00ff80;
 }
 
-nav a {
-  text-decoration: none;
-  color: #00ff00;
-  font-weight: bold;
-  font-family: 'Orbitron', sans-serif;
-  transition: 0.3s;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-nav a:hover {
-  color: #66ff66;
-  transform: scale(1.1);
+.nav-links a {
+    text-decoration: none;
+    color: #00ff80;
+    transition: 0.3s;
 }
 
-header {
-  text-align: center;
-  padding: 100px 20px 50px;
+.nav-links a:hover {
+    color: #00ffaa;
 }
 
-header h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 3em;
+/* MAIN CONTENT */
+.content {
+    margin-top: 150px;
+    text-align: center;
 }
 
-header .highlight {
-  color: #66ff66;
+.typing {
+    font-size: 28px;
+    width: 80%;
+    margin: auto;
+    white-space: pre-line;
+    overflow: hidden;
+    border-right: 2px solid #00ff80;
+    display: inline-block;
+    animation: cursorBlink 0.7s infinite;
 }
 
-header .subtitle {
-  font-size: 1.3em;
-  margin-top: 10px;
-  color: #99ff99;
-}
-
-#ctaButton {
-  margin-top: 30px;
-  padding: 12px 30px;
-  font-size: 1em;
-  font-family: 'Orbitron', sans-serif;
-  background: none;
-  border: 2px solid #00ff00;
-  color: #00ff00;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#ctaButton:hover {
-  background: #00ff00;
-  color: #0d0d0d;
-  transform: scale(1.05);
-}
-
-main {
-  padding: 50px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-main h2 {
-  font-family: 'Orbitron', sans-serif;
-  margin-bottom: 20px;
-  color: #66ff66;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  border-top: 2px solid #00ff00;
-  color: #77ff77;
+@keyframes cursorBlink {
+    50% { border-color: transparent; }
 }
